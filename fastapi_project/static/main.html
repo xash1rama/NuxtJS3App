@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebus test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4; /* Цвет фона страницы */
+            padding: 20px;
+        }
+        h1 {
+            color: #FF5722; /* Цвет заголовка, совпадающий с цветом фона заголовка */
+            margin-bottom: 10px;
+            font-size: 2rem; /* Увеличен размер заголовка */
+            text-align: center; /* Центрирование заголовка */
+        }
+        h2 {
+            color: #333; /* Цвет подзаголовка */
+            margin-bottom: 20px;
+            font-size: 1.5rem; /* Размер подзаголовка */
+            text-align: center; /* Центрирование подзаголовка */
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white; /* Цвет текста кнопки */
+            background-color: #FF5722; /* Цвет фона кнопки, совпадающий с цветом заголовка */
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #E64A19; /* Темнее оттенок для эффектов наведения на кнопку */
+            transform: translateY(-2px);
+        }
+        .button:active {
+            transform: translateY(0);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать на главную страницу тестовой работы Центр СМ!</h1>
+    <h2>Тестовое задание Александра Крайнева</h2>
+
+    <div class="button-container">
+        <a href="http://localhost:3000/" class="button">Перейти в Центр управления</a>
+    </div>
+    <img src="/static/image.webp" alt="CentrCM" />
+</body>
+</html>
