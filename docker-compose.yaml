@@ -1,0 +1,40 @@
+services:
+  app_cm:
+    container_name: test_center
+    build:
+      context: ./fastapi_project
+    ports:
+      - "8000:8000"
+    networks:
+      - mynetwork
+    depends_on:
+      - postgres
+
+  postgres:
+    container_name: postgres_container
+    image: postgres
+    environment:
+      - POSTGRES_DB=test_db
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./db:/var/lib/postgresql/data
+      - ./db_log:/var/lib/postgresql/pg_log
+    networks:
+      - mynetwork
+
+  nuxt:
+    build:
+      context: ./my-nuxt-app
+    ports:
+      - "3000:3000"
+    networks:
+      - mynetwork
+    depends_on:
+      - app_cm
+
+networks:
+  mynetwork:
+    driver: bridge
